@@ -1,4 +1,4 @@
-package com.shammer.udemytdd.vehicle
+package com.shammer.udemytdd.`coroutine-example`
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
