@@ -1,5 +1,7 @@
 package com.shammer.udemytdd.`coroutine-example`
 
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert.*
 import org.junit.Rule
@@ -37,10 +39,11 @@ class EngineTest {
     }
 
     @Test
-    fun engineIncreasesTemperatureTo95WhenStarted() = runBlockingTest {
+    fun engineIncreasesTemperatureGraduallyTo95WhenStarted() = runBlockingTest {
         val engine = Engine(2000, 189)
-        engine.start()
-        assertEquals(95, engine.temperature)
+        val flow: Flow<Int> = engine.start()
+        val actual = flow.toList()
+        assertEquals(listOf(25, 50 , 95), actual)
     }
 
     @Test

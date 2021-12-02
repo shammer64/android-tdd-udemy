@@ -2,6 +2,8 @@ package com.shammer.udemytdd.`coroutine-example`
 
 import android.util.Log
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 class Engine(
     val cc: Int,
@@ -9,11 +11,21 @@ class Engine(
     var temperature: Int = 15,
     var isRunning: Boolean = false
 ) {
-    suspend fun start() {
+    suspend fun start(): Flow<Int> {
         isRunning = true
-        delay(6000)
-        temperature = 95
-        Log.d("UDEMY", "Engine has started")
+
+        return flow {
+            delay(2000)
+            temperature = 25
+            emit(temperature)
+            delay(2000)
+            temperature = 50
+            emit(temperature)
+            delay(2000)
+            temperature = 95
+            emit(temperature)
+            Log.d("UDEMY", "Engine has started")
+        }
     }
 
     fun stop() {
