@@ -2,8 +2,6 @@ package com.shammer.udemytdd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.shammer.udemytdd.`coroutine-example`.Car
-import com.shammer.udemytdd.`coroutine-example`.Engine
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
