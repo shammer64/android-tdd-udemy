@@ -1,4 +1,4 @@
-package com.shammer.udemytdd
+package com.shammer.udemytdd.playlist
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater

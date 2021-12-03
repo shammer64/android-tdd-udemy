@@ -1,4 +1,4 @@
-package com.shammer.udemytdd
+package com.shammer.udemytdd.playlist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.shammer.udemytdd.R
 
 class PlaylistFragment : Fragment() {
 
